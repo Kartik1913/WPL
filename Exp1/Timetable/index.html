@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>College Timetable</title>
+
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background:#f4f4f4;
+        margin:20px;
+    }
+
+    h1{
+        text-align:center;
+        color:#333;
+    }
+
+    table{
+        width:100%;
+        border-collapse:collapse;
+        table-layout:fixed;
+        background:white;
+    }
+
+    th,td{
+        border:1px solid #999;
+        text-align:center;
+        vertical-align:middle;
+        padding:8px;
+        height:60px;
+        font-size:14px;
+    }
+
+    th{
+        background:#222;
+        color:white;
+    }
+
+    .time{
+        background:#ececec;
+        font-weight:bold;
+        width:80px;
+    }
+
+    .qml{
+        background:#2d1aff;
+        color:white;
+    }
+
+    .qaiml{
+        background:#8e44ad;
+        color:white;
+    }
+
+    .fms{
+        background:#4da3ff;
+        color:white;
+    }
+
+    .ml{
+        background:#ff2d2d;
+        color:white;
+    }
+
+    .ai{
+        background:#ff5b7d;
+        color:white;
+    }
+
+    .finance{
+        background:#4f8f1d;
+        color:white;
+    }
+
+    .fsd{
+        background:#c9a400;
+        color:white;
+    }
+
+    .mllab{
+        background:#0b7a0b;
+        color:white;
+    }
+
+    .ailab{
+        background:#f05cab;
+        color:white;
+    }
+
+    .cep{
+        background:#800080;
+        color:white;
+    }
+
+    .empty{
+        background:white;
+    }
+</style>
+
+</head>
+<body>
+
+<h1>Weekly Class Timetable</h1>
+
+<table>
+
+<tr>
+<th>Time</th>
+<th>Sunday</th>
+<th>Monday</th>
+<th>Tuesday</th>
+<th>Wednesday</th>
+<th>Thursday</th>
+<th>Friday</th>
+<th>Saturday</th>
+</tr>
+
+<tr>
+<td class="time">9:00 AM</td>
+<td></td>
+<td></td>
+<td rowspan="2" class="qml">
+16U376 Quantum Algorithms and Machine Learning Laboratory
+</td>
+<td class="qaiml">
+16U376 Quantum Algorithms and Machine Learning
+</td>
+<td class="qaiml">
+16U376 Quantum Algorithms and Machine Learning
+</td>
+<td class="qaiml">
+16U376 Quantum Algorithms and Machine Learning
+</td>
+<td></td>
+</tr>
+
+<tr>
+<td class="time">10:00 AM</td>
+<td></td>
+<td></td>
+
+<td class="fms">
+16U374 Fundamentals of Management and Business Strategy
+</td>
+
+<td class="ai">
+16U374 Artificial Intelligence
+</td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td class="time">11:00 AM</td>
+
+<td></td>
+
+<td rowspan="2" class="finance">
+16U376 Finance and Cost Accounting
+</td>
+
+<td class="ml">
+16U377 Machine Learning
+</td>
+
+<td class="ai">
+16U374 Artificial Intelligence
+</td>
+
+<td class="finance">
+16U376 Finance and Cost Accounting
+</td>
+
+<td rowspan="2" class="fsd">
+16U377 Full Stack Development Laboratory
+</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td class="time">12:00 PM</td>
+
+<td></td>
+
+<td class="fms">
+16U374 Fundamentals of Management and Business Strategy
+</td>
+
+<td class="ml">
+16U377 Machine Learning
+</td>
+
+<td class="fms">
+16U374 Fundamentals of Management and Business Strategy
+</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td class="time">1:00 PM</td>
+
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+
+</tr>
+
+<tr>
+
+<td class="time">2:00 PM</td>
+
+<td></td>
+
+<td rowspan="2" class="mllab">
+16U378 Machine Learning Laboratory
+</td>
+
+<td rowspan="2" class="fsd">
+16U377 Full Stack Development Laboratory
+</td>
+
+<td></td>
+
+<td class="ml">
+16U377 Machine Learning
+</td>
+
+<td rowspan="2" class="ailab">
+16U374 Artificial Intelligence Laboratory
+</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td class="time">3:00 PM</td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td class="time">4:00 PM</td>
+
+<td></td>
+
+<td rowspan="2" class="cep">
+16U378 Community Engagement Project with Design Thinking
+</td>
+
+<td rowspan="2" class="cep">
+16U378 Community Engagement Project with Design Thinking
+</td>
+
+<td></td>
+
+<td></td>
+
+<td class="ai">
+16U374 Artificial Intelligence
+</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td class="time">5:00 PM</td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+
+<td class="finance">
+16U376 Finance and Cost Accounting
+</td>
+
+<td></td>
+
+</tr>
+
+</table>
+
+</body>
+</html>
