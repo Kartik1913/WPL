@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somaiya Store | Fresh Vegetables & Groceries</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <h2>Somaiya Grocery Store</h2>
+    <div class="subtitle">Fresh Daily Groceries & Vegetables Delivered to Your Doorstep</div>
+
+    <div class="container">
+        <!-- Item 1 -->
+        <div class="item" data-price="60" data-name="Fresh Ginger (Adrak)" data-weight="250">
+            <div class="image-container">
+                <img class="image" src="data:image/jpeg;base64,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" alt="Fresh Ginger (Adrak)">
+            </div>
+            <div class="product-info">
+                <div class="product-name">Fresh Ginger (Adrak)</div>
+                <div class="product-price">₹60</div>
+                <div class="product-weight">Weight: 250g</div>
+            </div>
+            <div class="controls">
+                <button class="btn-qty" onclick="changeQuantity(this, -1)">-</button>
+                <input class="quantity-input" type="number" value="0" min="0" onchange="validateQuantity(this)">
+                <button class="btn-qty" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="item" data-price="45" data-name="Taro Root (Arbi)" data-weight="500">
+            <div class="image-container">
+                <img class="image" src="https://kjmal.b-cdn.net/media/31163/12567.png" alt="Taro Root (Arbi)">
+            </div>
+            <div class="product-info">
+                <div class="product-name">Taro Root (Arbi)</div>
+                <div class="product-price">₹45</div>
+                <div class="product-weight">Weight: 500g</div>
+            </div>
+            <div class="controls">
+                <button class="btn-qty" onclick="changeQuantity(this, -1)">-</button>
+                <input class="quantity-input" type="number" value="0" min="0" onchange="validateQuantity(this)">
+                <button class="btn-qty" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="item" data-price="50" data-name="Fresh Onion (Pyaz)" data-weight="1000">
+            <div class="image-container">
+                <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk2tfaLwfjEkF9AADdrOiNSpp9vMPn6W84U8_86-LCgw&s=10" alt="Fresh Onion (Pyaz)">
+            </div>
+            <div class="product-info">
+                <div class="product-name">Fresh Onion (Pyaz)</div>
+                <div class="product-price">₹50</div>
+                <div class="product-weight">Weight: 1 kg</div>
+            </div>
+            <div class="controls">
+                <button class="btn-qty" onclick="changeQuantity(this, -1)">-</button>
+                <input class="quantity-input" type="number" value="0" min="0" onchange="validateQuantity(this)">
+                <button class="btn-qty" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="item" data-price="30" data-name="Cucumber (Kheera)" data-weight="500">
+            <div class="image-container">
+                <img class="image" src="https://tse1.mm.bing.net/th/id/OIP.tKQ3N9tqqJQvq7JaiJ8O9QHaEd?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Cucumber (Kheera)">
+            </div>
+            <div class="product-info">
+                <div class="product-name">Cucumber (Kheera)</div>
+                <div class="product-price">₹30</div>
+                <div class="product-weight">Weight: 500g</div>
+            </div>
+            <div class="controls">
+                <button class="btn-qty" onclick="changeQuantity(this, -1)">-</button>
+                <input class="quantity-input" type="number" value="0" min="0" onchange="validateQuantity(this)">
+                <button class="btn-qty" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="item" data-price="40" data-name="Beetroot (Chukandar)" data-weight="500">
+            <div class="image-container">
+                <img class="image" src="https://th.bing.com/th/id/OIP.ayrr-YksoNnl-k09-sr_vQHaHX?w=173&h=180&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3" alt="Beetroot (Chukandar)">
+            </div>
+            <div class="product-info">
+                <div class="product-name">Beetroot (Chukandar)</div>
+                <div class="product-price">₹40</div>
+                <div class="product-weight">Weight: 500g</div>
+            </div>
+            <div class="controls">
+                <button class="btn-qty" onclick="changeQuantity(this, -1)">-</button>
+                <input class="quantity-input" type="number" value="0" min="0" onchange="validateQuantity(this)">
+                <button class="btn-qty" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="item" data-price="90" data-name="Farm Fresh Eggs (12 pcs)" data-weight="700">
+            <div class="image-container">
+                <img class="image" src="https://cdn.pixabay.com/photo/2018/07/23/18/43/hens-egg-3557544_1280.jpg" alt="Farm Fresh Eggs (12 pcs)">
+            </div>
+            <div class="product-info">
+                <div class="product-name">Farm Fresh Eggs (12 pcs)</div>
+                <div class="product-price">₹90</div>
+                <div class="product-weight">Weight: 700g</div>
+            </div>
+            <div class="controls">
+                <button class="btn-qty" onclick="changeQuantity(this, -1)">-</button>
+                <input class="quantity-input" type="number" value="0" min="0" onchange="validateQuantity(this)">
+                <button class="btn-qty" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="item" data-price="35" data-name="Potatoes (Aloo)" data-weight="1000">
+            <div class="image-container">
+                <img class="image" src="https://th.bing.com/th/id/OIP.9jMp2QBOr7lp79md0CdisAAAAA?w=270&h=180&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3" alt="Potatoes (Aloo)">
+            </div>
+            <div class="product-info">
+                <div class="product-name">Potatoes (Aloo)</div>
+                <div class="product-price">₹35</div>
+                <div class="product-weight">Weight: 1 kg</div>
+            </div>
+            <div class="controls">
+                <button class="btn-qty" onclick="changeQuantity(this, -1)">-</button>
+                <input class="quantity-input" type="number" value="0" min="0" onchange="validateQuantity(this)">
+                <button class="btn-qty" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="item" data-price="25" data-name="Bottle Gourd (Lauki)" data-weight="600">
+            <div class="image-container">
+                <img class="image" src="https://tse1.mm.bing.net/th/id/OIP.EXIDXadC6icGMXon2C1GUgHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Bottle Gourd (Lauki)">
+            </div>
+            <div class="product-info">
+                <div class="product-name">Bottle Gourd (Lauki)</div>
+                <div class="product-price">₹25</div>
+                <div class="product-weight">Weight: 600g</div>
+            </div>
+            <div class="controls">
+                <button class="btn-qty" onclick="changeQuantity(this, -1)">-</button>
+                <input class="quantity-input" type="number" value="0" min="0" onchange="validateQuantity(this)">
+                <button class="btn-qty" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+        </div>
+
+        <!-- Item 9 -->
+        <div class="item" data-price="30" data-name="White Radish (Mooli)" data-weight="500">
+            <div class="image-container">
+                <img class="image" src="https://th.bing.com/th/id/OIP.9RDSe2ZooAdD-CGa_aWswAHaD_?w=325&h=180&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3" alt="White Radish (Mooli)">
+            </div>
+            <div class="product-info">
+                <div class="product-name">White Radish (Mooli)</div>
+                <div class="product-price">₹30</div>
+                <div class="product-weight">Weight: 500g</div>
+            </div>
+            <div class="controls">
+                <button class="btn-qty" onclick="changeQuantity(this, -1)">-</button>
+                <input class="quantity-input" type="number" value="0" min="0" onchange="validateQuantity(this)">
+                <button class="btn-qty" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+        </div>
+
+        <!-- Item 10 -->
+        <div class="item" data-price="40" data-name="Pumpkin (Kaddu)" data-weight="1000">
+            <div class="image-container">
+                <img class="image" src="https://th.bing.com/th/id/OIP.QFDuFmN6ND9wyC0YulIzEwHaHa?w=182&h=182&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3" alt="Pumpkin (Kaddu)">
+            </div>
+            <div class="product-info">
+                <div class="product-name">Pumpkin (Kaddu)</div>
+                <div class="product-price">₹40</div>
+                <div class="product-weight">Weight: 1 kg</div>
+            </div>
+            <div class="controls">
+                <button class="btn-qty" onclick="changeQuantity(this, -1)">-</button>
+                <input class="quantity-input" type="number" value="0" min="0" onchange="validateQuantity(this)">
+                <button class="btn-qty" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+        </div>
+
+        <!-- Item 11 -->
+        <div class="item" data-price="40" data-name="Fresh Lemons (Nimbu)" data-weight="250">
+            <div class="image-container">
+                <img class="image" src="https://images.unsplash.com/photo-1590502593747-42a996133562?w=400&auto=format&fit=crop" alt="Fresh Lemons (Nimbu)">
+            </div>
+            <div class="product-info">
+                <div class="product-name">Fresh Lemons (Nimbu)</div>
+                <div class="product-price">₹40</div>
+                <div class="product-weight">Weight: 250g</div>
+            </div>
+            <div class="controls">
+                <button class="btn-qty" onclick="changeQuantity(this, -1)">-</button>
+                <input class="quantity-input" type="number" value="0" min="0" onchange="validateQuantity(this)">
+                <button class="btn-qty" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+        </div>
+
+        <!-- Item 12 -->
+        <div class="item" data-price="30" data-name="Cabbage (Patta Gobhi)" data-weight="500">
+            <div class="image-container">
+                <img class="image" src="https://th.bing.com/th/id/OIP.8Xyk3m5FT0REeLSOUwFHBQHaEJ?w=324&h=182&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3" alt="Cabbage (Patta Gobhi)">
+            </div>
+            <div class="product-info">
+                <div class="product-name">Cabbage (Patta Gobhi)</div>
+                <div class="product-price">₹30</div>
+                <div class="product-weight">Weight: 500g</div>
+            </div>
+            <div class="controls">
+                <button class="btn-qty" onclick="changeQuantity(this, -1)">-</button>
+                <input class="quantity-input" type="number" value="0" min="0" onchange="validateQuantity(this)">
+                <button class="btn-qty" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+        </div>
+
+        <!-- Item 13 -->
+        <div class="item" data-price="45" data-name="Cauliflower (Phool Gobhi)" data-weight="600">
+            <div class="image-container">
+                <img class="image" src="https://tse4.mm.bing.net/th/id/OIP.qbtfTieEpOA4y66SY0zvEAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Cauliflower (Phool Gobhi)">
+            </div>
+            <div class="product-info">
+                <div class="product-name">Cauliflower (Phool Gobhi)</div>
+                <div class="product-price">₹45</div>
+                <div class="product-weight">Weight: 600g</div>
+            </div>
+            <div class="controls">
+                <button class="btn-qty" onclick="changeQuantity(this, -1)">-</button>
+                <input class="quantity-input" type="number" value="0" min="0" onchange="validateQuantity(this)">
+                <button class="btn-qty" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+        </div>
+
+        <!-- Item 14 -->
+        <div class="item" data-price="60" data-name="Capsicum (Shimla Mirch)" data-weight="500">
+            <div class="image-container">
+                <img class="image" src="https://th.bing.com/th/id/OIP.hPhFojM8kKi7luG87UnDYQHaFS?w=282&h=200&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3" alt="Capsicum (Shimla Mirch)">
+            </div>
+            <div class="product-info">
+                <div class="product-name">Capsicum (Shimla Mirch)</div>
+                <div class="product-price">₹60</div>
+                <div class="product-weight">Weight: 500g</div>
+            </div>
+            <div class="controls">
+                <button class="btn-qty" onclick="changeQuantity(this, -1)">-</button>
+                <input class="quantity-input" type="number" value="0" min="0" onchange="validateQuantity(this)">
+                <button class="btn-qty" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+        </div>
+
+        <!-- Item 15 -->
+        <div class="item" data-price="90" data-name="Fresh Broccoli" data-weight="400">
+            <div class="image-container">
+                <img class="image" src="https://th.bing.com/th/id/OIP.O98r96dyjCPdl-CuGAZQYgHaHa?w=191&h=191&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3" alt="Fresh Broccoli">
+            </div>
+            <div class="product-info">
+                <div class="product-name">Fresh Broccoli</div>
+                <div class="product-price">₹90</div>
+                <div class="product-weight">Weight: 400g</div>
+            </div>
+            <div class="controls">
+                <button class="btn-qty" onclick="changeQuantity(this, -1)">-</button>
+                <input class="quantity-input" type="number" value="0" min="0" onchange="validateQuantity(this)">
+                <button class="btn-qty" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dynamic Cart Summary Bar -->
+    <div class="cart-banner">
+        <div class="cart-top-row">
+            <span class="cart-selected-badge" id="cart-item-count">0 Items</span>
+            <span id="cart-summary-items">No items selected</span>
+        </div>
+        <div class="cart-bottom-row">
+            <div class="cart-details">
+                <div class="cart-item-detail">
+                    <span class="cart-item-label">Subtotal</span>
+                    <span class="cart-item-value" id="cart-subtotal">₹0</span>
+                </div>
+                <div class="cart-item-detail">
+                    <span class="cart-item-label">GST (5%)</span>
+                    <span class="cart-item-value" id="cart-gst">₹0</span>
+                </div>
+                <div class="cart-item-detail">
+                    <span class="cart-item-label">Delivery</span>
+                    <span class="cart-item-value" id="cart-delivery">₹0</span>
+                </div>
+                <div class="cart-item-detail">
+                    <span class="cart-item-label">Total Weight</span>
+                    <span class="cart-item-value" id="cart-total-weight">0.00 kg</span>
+                </div>
+                <div class="cart-item-detail">
+                    <span class="cart-item-label">Total Amount</span>
+                    <span class="cart-item-value grand-total" id="cart-total">₹0</span>
+                </div>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Checkout Now</button>
+        </div>
+    </div>
+</body>
+
+</html>
