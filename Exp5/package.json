@@ -1,0 +1,23 @@
+{
+  "name": "kjs-agr-01-exp5",
+  "version": "1.0.0",
+  "description": "FSDL Experiment 5 - Node.js and Express.js: Irrigation Advisory System for Sugarcane Crop (KJS-AGR-01)",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "http": "node httpserver.js",
+    "files": "node filedemo.js",
+    "math": "node usemath.js",
+    "test:api": "node tests/api-test.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^7.0.2",
+    "express": "^5.3.0",
+    "mongoose": "^9.11.2",
+    "xlsx": "^0.18.5"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}

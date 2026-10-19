@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sugarcane Irrigation Advisory - KJS-AGR-01</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top">
+  <h1>Irrigation Advisory System for Sugarcane Crop</h1>
+  <p>KJS-AGR-01 &middot; Experiment 5 &middot; static page served by <code>express.static</code></p>
+</header>
+<main>
+  <section>
+    <h2>Explore</h2>
+    <ul class="links">
+      <li><a href="/dashboard">/dashboard</a> &ndash; dynamic EJS dashboard</li>
+      <li><a href="/hello">/hello</a> &ndash; basic Express route</li>
+      <li><a href="/api/summary">/api/summary</a> &ndash; dataset statistics (JSON)</li>
+      <li><a href="/api/advice?humidity=22.5">/api/advice?humidity=22.5</a> &ndash; advice for one reading</li>
+      <li><a href="/seed">/seed</a> &ndash; import the Excel rows into MongoDB</li>
+      <li><a href="/api/records">/api/records</a> &ndash; records stored in MongoDB</li>
+    </ul>
+  </section>
+
+
+  <p class="muted">Advice uses demonstration thresholds on soil humidity; it is not a validated agronomic recommendation.</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Irrigation Dashboard - KJS-AGR-01</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top">
+  <h1>Sugarcane Irrigation Advisory Dashboard</h1>
+  <p>KJS-AGR-01 &middot; rule-based advice from soil humidity &middot; rendered with EJS</p>
+</header>
+<main>
+  <section class="cards">
+    <div class="card"><span class="label">Records</span><span class="value"><%= summary.records %></span></div>
+    <div class="card"><span class="label">Columns</span><span class="value"><%= summary.columns %></span></div>
+    <div class="card"><span class="label">Avg soil humidity</span><span class="value"><%= summary.soilHumidity.average %>%</span></div>
+    <div class="card"><span class="label">Min / Max</span><span class="value"><%= summary.soilHumidity.min %> / <%= summary.soilHumidity.max %></span></div>
+    <div class="card"><span class="label">Avg predicted yield</span><span class="value"><%= summary.averagePredictedYield %></span></div>
+  </section>
+
+  <section>
+    <h2>Advice rule and distribution</h2>
+    <p>Rule: below <b><%= summary.thresholds.irrigateBelow %>%</b> &rarr; Irrigate now;
+       <b><%= summary.thresholds.irrigateBelow %>%</b> to below <b><%= summary.thresholds.noIrrigationFrom %>%</b> &rarr; Monitor soil;
+       <b><%= summary.thresholds.noIrrigationFrom %>%</b> or more &rarr; No irrigation needed.</p>
+    <% const order = ['Irrigate now', 'Monitor soil', 'No irrigation needed']; %>
+    <% order.forEach(function (label) {
+         const n = summary.adviceByRule[label] || 0;
+         const pct = (100 * n / summary.records).toFixed(1); %>
+      <div class="bar-row">
+        <span class="bar-label"><%= label %></span>
+        <span class="bar"><span class="fill" style="width: <%= pct %>%"></span></span>
+        <span class="bar-num"><%= n %> (<%= pct %>%)</span>
+      </div>
+    <% }); %>
+    <p class="muted">Rule output matches the dataset's own <code>irrigation_advice</code> label for
+      <%= summary.ruleMatchesDatasetLabels.matching %> of <%= summary.ruleMatchesDatasetLabels.total %> records.</p>
+  </section>
+
+  <section>
+    <h2>Representative records (first three of each advice class)</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Leaf</th><th>Stage</th><th>Season</th><th>Soil humidity (%)</th><th>Rule advice</th><th>Dataset label</th><th>Water (L/day)</th></tr></thead>
+      <tbody>
+      <% samples.forEach(function (r) { %>
+        <tr>
+          <td><%= r.leaf %></td><td><%= r.stages %></td><td><%= r.microclimaticseason %></td>
+          <td><%= r.soilhumidity %></td><td><b><%= r.ruleAdvice %></b></td>
+          <td><%= r.irrigation_advice %></td><td><%= r.predicted_water_liters_per_day %></td>
+        </tr>
+      <% }); %>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Stages and seasons in the dataset</h2>
+    <p><% Object.keys(summary.byStage).forEach(function (k) { %><span class="chip"><%= k %>: <%= summary.byStage[k] %></span><% }); %></p>
+    <p><% Object.keys(summary.bySeason).forEach(function (k) { %><span class="chip"><%= k %>: <%= summary.bySeason[k] %></span><% }); %></p>
+  </section>
+
+  <p class="muted"><b>Note:</b> thresholds are demonstration values, not validated agronomic recommendations,
+    and no AI/ML model is trained here. MongoDB status: <b><%= mongoUp ? 'connected' : 'not connected' %></b>.
+    API: <a href="/api/summary">/api/summary</a> &middot; <a href="/api/records">/api/records</a> &middot; <a href="/">home</a></p>
+</main>
+</body>
+</html>
