@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sugarcane Smart Irrigation Advisory System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Sugarcane Smart Irrigation Advisory System</h1>
+    <p>Use Case KJS-AGR-01 &middot; Demonstration rule-based advisory (not a trained AI/ML model)</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2 id="formTitle">Farmer and Plot Information</h2>
+      <form id="recordForm" novalidate>
+        <div class="grid">
+          <div><label for="farmerName">Farmer Name</label>
+            <input type="text" id="farmerName" placeholder="e.g. Anil Jadhav" required></div>
+          <div><label for="farmerId">Farmer ID</label>
+            <input type="text" id="farmerId" placeholder="FRM-101" required></div>
+          <div><label for="plotId">Plot ID</label>
+            <input type="text" id="plotId" placeholder="PLT-1001" required></div>
+          <div><label for="plotArea">Plot Area (acres)</label>
+            <input type="number" id="plotArea" step="0.1" min="0.1" required></div>
+          <div><label for="soilMoisture">Soil Moisture (%)</label>
+            <input type="number" id="soilMoisture" step="0.1" min="0" max="100" required></div>
+          <div><label for="soilType">Soil Type</label>
+            <select id="soilType" required>
+              <option value="">-- Select --</option>
+              <option>Black cotton</option><option>Red soil</option>
+              <option>Sandy loam</option><option>Clay loam</option>
+            </select></div>
+          <div><label for="cropStage">Crop Growth Stage</label>
+            <select id="cropStage" required>
+              <option value="">-- Select --</option>
+              <option>Germination</option><option>Tillering</option>
+              <option>Grand Growth</option><option>Maturity</option>
+            </select></div>
+          <div><label for="temperature">Temperature (&deg;C)</label>
+            <input type="number" id="temperature" step="0.1" required></div>
+          <div><label for="humidity">Humidity (%)</label>
+            <input type="number" id="humidity" step="0.1" min="0" max="100" required></div>
+          <div><label for="expectedRainfall">Expected Rainfall (mm)</label>
+            <input type="number" id="expectedRainfall" step="0.1" min="0" required></div>
+          <div><label for="lastIrrigationDate">Last Irrigation Date</label>
+            <input type="date" id="lastIrrigationDate" required></div>
+        </div>
+        <div class="actions">
+          <button type="submit" id="saveBtn">Save Record</button>
+          <button type="button" id="previewBtn" class="secondary">Preview Advisory</button>
+          <button type="button" id="cancelBtn" class="secondary" hidden>Cancel Edit</button>
+        </div>
+      </form>
+      <div id="message" role="status"></div>
+      <div id="advisoryBox" class="advisory" hidden></div>
+    </section>
+
+    <section class="card">
+      <h2>Saved Agricultural Records</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Farmer</th><th>Farmer ID</th><th>Plot ID</th><th>Area (ac)</th>
+              <th>Moisture %</th><th>Soil</th><th>Stage</th><th>Temp &deg;C</th>
+              <th>Humidity %</th><th>Rain mm</th><th>Last Irrigation</th>
+              <th>Advisory</th><th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="records"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Demonstration only: sample data is fictional, thresholds are not scientifically validated,
+    and no real sensors or weather API are connected.
+  </footer>
+  <script src="frontend.js"></script>
+</body>
+</html>
